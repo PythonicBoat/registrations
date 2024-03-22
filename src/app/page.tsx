@@ -9,9 +9,33 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="">
+    <div style={{
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
+      backgroundColor: 'transparent',
+    }}>
+      <div style={{
+        backgroundImage: `url('/asstes/images/bg.png')`,
+        backgroundSize: 'cover',
+        opacity: 0.6,
+        height: '100vh',
+        width: '100vw',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        backgroundPosition: '0 -50px' 
+      }} />
+      
       <Form />
-      <div className="mt-5 ml-3">
+      <div style={{
+        position: 'absolute',
+        top: 20,
+        left: 20,
+        backgroundColor: 'transparent',
+      }}>
         <Image
           src={"/asstes/icons/mlsa.png"}
           alt="mlsa logo"
@@ -20,32 +44,5 @@ export default function Page() {
         />
       </div>
     </div>
-    //TODO: LANDING PAGE
-    // <div className="h-screen text-white flex flex-col pt-12 px-4 gap-4 items-center">
-    //   <Image src={Icon} alt="Icon" />
-
-    //   <h1 className="text-3xl md:text-5xl font-bold mt-10">{Form_Details.title}</h1>
-
-    //   <section className="text-center mt-4">
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid totam
-    //     provident veniam eos debitis laboriosam nesciunt excepturi rerum,
-    //     delectus ipsa, facilis sit corporis voluptates, eveniet ad nobis.
-    //     Repellat, eum architecto.
-    //   </section>
-
-    //   <div className="absolute w-screen h-24  flex justify-center bottom-0">
-    //     <Link
-    //       className={cn(
-    //         buttonVariants({ variant: "default" }),
-    //         "text-2xl md:text-3xl bg-primary-color w-64 h-12"
-    //       )}
-    //       href="/form"
-    //     >
-    //       Register
-    //     </Link>
-
-    //   </div>
-
-    // </div>
   );
 }
