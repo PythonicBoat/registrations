@@ -101,15 +101,19 @@ function Mainform() {
       return;
     }
 
-    const res = await CreateUser(result.data);
-
-    if (res.success) {
-      toast.success("Successfully Applied!");
-      router.push("/outro");
-    } else {
-      toast.error(res.error.message);
-      SetSubmitting(false);
-    }
+    toast.promise(CreateUser(result.data), {
+      loading: "Submitting...",
+      success: (data) => {
+        if (data.success) {
+          router.push("/outro");
+          return "Successfully Applied!";
+        } else {
+          return data.error.message;
+        }
+      },
+      error: (err) => err.message,
+    });
+    SetSubmitting(false);
   };
 
   const nextPage = () => {
