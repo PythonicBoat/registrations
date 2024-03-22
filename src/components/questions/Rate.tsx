@@ -38,6 +38,12 @@ function Rate({
           </Label>
         </div>
         <div className="flex items-center space-x-2">
+          <RadioGroupItem value="intermediate" id="rate" className="bg-white" />
+          <Label htmlFor="intermediate" className="text-white md:text-base">
+            Intermediate
+          </Label>
+        </div>
+        <div className="flex items-center space-x-2">
           <RadioGroupItem value="advanced" id="rate" className="bg-white" />
           <Label htmlFor="advanced" className="text-white md:text-base">
             Advanced
