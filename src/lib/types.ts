@@ -20,7 +20,7 @@ export const UserSchema = z.object({
       return { message: "Please select your Year" };
     },
   }),
-  rate: z.enum(["beginner", "advanced"], {
+  rate: z.enum(["beginner", "intermediate", "advanced"], {
     errorMap: (issue, ctx) => {
       return { message: "Please select your Experience" };
     },
