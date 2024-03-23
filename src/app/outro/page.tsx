@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../../public/asstes/icons/mlsa.png";
+import Icon from "../../../public/assets/icons/mlsa.png";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import Link from "next/link";

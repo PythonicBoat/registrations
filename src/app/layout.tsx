@@ -1,3 +1,4 @@
+import {Providers} from "./providers";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toaster />
-        <div className="min-h-screen text-white autofill:text-white bg-black">
+        <div className="min-h-screen text-white bg-black autofill:text-white">
+        <Providers>
           {children}
+        </Providers>
         </div>
       </body>
     </html>
