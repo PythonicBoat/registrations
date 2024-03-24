@@ -37,7 +37,7 @@ function Mainform() {
       name: "tryhackmeId",
       title: "Try hack me Id (optional)",
     },
-    { Component: Year, name: "year", title: "Batch of" },
+    { Component: Year, name: "year", title: "Year" },
     { Component: Rate, name: "rate", title: "Experience" },
   ];
 

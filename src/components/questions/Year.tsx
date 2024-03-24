@@ -39,12 +39,12 @@ function Year({
           />
         </SelectTrigger>
         <SelectContent>
-          {[2027, 2026, 2025, 2024].map((year) => {
+          {[1, 2, 3, 4].map((year) => {
             return (
               <SelectItem key={year} value={year.toString()}>
                 {year}
               </SelectItem>
-            );2
+            );
           })}
         </SelectContent>
       </Select>
